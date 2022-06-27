@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Inputs</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    아이디<br>
+    <input type="text" name="id" value="2sjin@deu.ac.kr">
+    <br><br>
+    
+    비밀번호<br>
+    <input type="password" name="pwd" value="111">
+    <br><br>
+    
+    나이<br>
+    <input type="number" name="age" value="20" min="1" max="120" step="1">
+    <br><br>
+
+    생년월일<br>
+    <input type="date" name="birth" value="2022-04-11">
+    <br><br>
+
+    이메일<br>
+    <form>
+        <input type="email" name="email" placeholder="이메일 주소를 입력하세요", required><br>
+        <input type="submit" name="submit" value="확인">
+        <input type="reset" name="reset", value="지우기">
+    </form>
+    <br><br>
+
+    사용 가능한 DBMS(복수선택 가능)<br>
+    <!-- checkbox는 name에 그룹명 들어감-->
+    <input type="checkbox" name="fruit" value="apple">Oracle
+    <input type="checkbox" name="fruit" value="banana">MySQL
+    <input type="checkbox" name="fruit" value="orange">etc.
+    <br><br>
+
+    성별<br>
+    <!-- radio는 name에 그룹명 들어감-->
+    <input type="radio" name="fruit2" value="male" checked>남(male)
+    <input type="radio" name="fruit2" value="female">여(female)
+    <br><br>
+    
+    학적<br>
+    <select name="register">
+        <option value="">재학</option>
+        <option value="">휴학</option>
+        <option value="">졸업(예정)</option>
+        <option value="etc">기타</option>
+    </select>
+    <br><br>
+
+    자기소개<br>
+    <textarea name="comment" rows="10" cols="50" placeholder="Add your comment">No comment</textarea>
+    <br><br>
+
+    Button<br>
+    <button onclick="writeComment()">버튼</button>
+    <br><br>  
+
+    Range<br>
+    <input type="range" name="num" value="10" min="1" max="120" step="2">
+    <br><br>
+
+    Color<br>
+    <input type="color" name="color" value="#00ff00">
+    <br><br>
+
+</body>
+</html>
