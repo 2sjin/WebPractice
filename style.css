@@ -37,3 +37,17 @@ body {
 #grid #article {
     padding: 25px;
 }
+
+/* mediaquery : 반응형 디자인 */
+@media(max-width: 700px) {
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        display: block;
+        border-right: none;
+    }
+    .headline {
+        border-bottom: none;
+    }
+}
