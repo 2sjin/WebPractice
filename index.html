@@ -3,45 +3,45 @@
     <title>Main Page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+
+        function setColor(name, color) {
+            var links = document.querySelectorAll(name);
+            for (var i=0; i<links.length; i++) {
+                links[i].style.color = color;
+            }
+        }
+
+        function setBackgroundColor(name, color) {
+            var links = document.querySelectorAll(name);
+            for (var i=0; i<links.length; i++) {
+                links[i].style.backgroundColor = color;
+            }
+        }
+
+        function nightDayHandler(link_btn) {
+            if (link_btn.value === 'Day → Night') {   // this = document.querySelector(버튼ID)
+                link_btn.value = 'Night → Day';
+                setBackgroundColor('body', 'black');
+                setColor('body', 'white');
+                setColor('a', 'skyblue');
+                setColor('.active', 'red');
+            }
+            else {
+                link_btn.value = 'Day → Night';
+                var body = document.querySelector('body').style;
+                setBackgroundColor('body', 'white');
+                setColor('body', 'black');
+                setColor('a', 'blue');
+                setColor('.active', 'red');
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>
         <a href="index.html" class="active headline">WEB</a>
-
-        <input type="button" value="Day → Night" onclick="
-            if (this.value === 'Day → Night') {   // this = document.querySelector(버튼ID)
-                this.value = 'Night → Day';
-                var body = document.querySelector('body').style;
-                body.backgroundColor = 'black';
-                body.color = 'white';
-
-                var links = document.querySelectorAll('a');
-                for (var i=0; i<links.length; i++) {
-                    links[i].style.color = 'skyblue';
-                }
-
-                var links = document.querySelectorAll('.active');
-                for (var i=0; i<links.length; i++) {
-                    links[i].style.color = 'red';
-                }
-            }
-            else {
-                this.value = 'Day → Night';
-                var body = document.querySelector('body').style;
-                body.backgroundColor = 'white';
-                body.color = 'black';
-
-                var links = document.querySelectorAll('a');
-                for (var i=0; i<links.length; i++) {
-                    links[i].style.color = 'blue';
-                }
-
-                var links = document.querySelectorAll('.active');
-                for (var i=0; i<links.length; i++) {
-                    links[i].style.color = 'red';
-                }
-            }
-        ">
+        <input type="button" value="Day → Night" onclick="nightDayHandler(this);">
     </h1>
 
     <div id="grid">
