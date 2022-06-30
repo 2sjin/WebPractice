@@ -5,7 +5,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><a href="index.html" class="active headline">WEB</a></h1>
+    <h1>
+        <a href="index.html" class="active headline">WEB</a>
+
+        <input type="button" value="Day → Night" onclick="
+            if (this.value === 'Day → Night') {   // this = document.querySelector(버튼ID)
+                this.value = 'Night → Day';
+                var body = document.querySelector('body').style;
+                body.backgroundColor = 'black';
+                body.color = 'white';
+
+                var links = document.querySelectorAll('a');
+                for (var i=0; i<links.length; i++) {
+                    links[i].style.color = 'skyblue';
+                }
+
+                var links = document.querySelectorAll('.active');
+                for (var i=0; i<links.length; i++) {
+                    links[i].style.color = 'red';
+                }
+            }
+            else {
+                this.value = 'Day → Night';
+                var body = document.querySelector('body').style;
+                body.backgroundColor = 'white';
+                body.color = 'black';
+
+                var links = document.querySelectorAll('a');
+                for (var i=0; i<links.length; i++) {
+                    links[i].style.color = 'blue';
+                }
+
+                var links = document.querySelectorAll('.active');
+                for (var i=0; i<links.length; i++) {
+                    links[i].style.color = 'red';
+                }
+            }
+        ">
+    </h1>
 
     <div id="grid">
         <ol>
