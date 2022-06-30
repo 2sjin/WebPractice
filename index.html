@@ -38,21 +38,6 @@
             }
         }
 
-
-        function setColor(name, color) {
-            var links = document.querySelectorAll(name);
-            for (var i=0; i<links.length; i++) {
-                links[i].style.color = color;
-            }
-        }
-
-        function setBackgroundColor(name, color) {
-            var links = document.querySelectorAll(name);
-            for (var i=0; i<links.length; i++) {
-                links[i].style.backgroundColor = color;
-            }
-        }
-
         function nightDayHandler(link_btn) {
             if (link_btn.value === 'Day → Night') {   // this = document.querySelector(버튼ID)
                 link_btn.value = 'Night → Day';
