@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <h1>Object</h1>
+    
+    <hr>
+    <h2>Create</h2>
+    <h3>객체의 property 생성</h3>
+    <script>
+        var dic = {
+            'apple': '사과',
+            'banana': '바나나'
+        };
+        document.write("apple: " + dic.apple + "<br>")
+        document.write("banana: " + dic['banana'] + "<br>")
+
+        dic.orange = '오렌지';
+        dic['Gum-Gum Fruit'] = '고무고무 열매';
+
+        document.write("orange: " + dic.orange + "<br>")
+        document.write("Gum-Gum Fruit: " + dic['Gum-Gum Fruit'] + "<br>") 
+    </script>
+
+    <hr>
+    <h2>Iterate</h2>
+    <h3>for in 반복문으로 (키, 값) 출력</h3>
+    <script>
+        for (var s in dic) {
+            document.write(s + ": " + dic[s] + "<br>")     // dic.s 는 불가능
+        }
+    </script>
+
+    <hr>
+    <h2>Property & Method</h2>
+    <h3>프로퍼티(변수)와 메소드(함수)</h3>
+    <script>
+        dic.showAll = function() {
+            for (var s in this) {
+                document.write(s + ": " + this[s] + "<br>")     // dic.s 는 불가능
+            }
+        }
+        dic.showAll();
+    </script>
+
+</body>
+</html>
