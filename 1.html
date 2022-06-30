@@ -3,9 +3,13 @@
     <title>HTML Page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
 </head>
 <body>
-    <h1><a href="index.html" class="headline">WEB</a></h1>
+    <h1>
+        <a href="index.html" class="headline">WEB</a>
+        <input type="button" value="Day → Night" onclick="nightDayHandler(this);">
+    </h1>
     <div id="grid">
         <ol>
             <li><a href="1.html" class="active">HTML</a></li>
