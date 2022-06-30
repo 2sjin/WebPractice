@@ -5,6 +5,40 @@
     <link rel="stylesheet" href="style.css">
     <script>
 
+        var Body = {
+            setColor: function(color) {
+                var links = document.querySelectorAll('body');
+                    for (var i=0; i<links.length; i++) {
+                        links[i].style.color = color;
+                }                
+            }, 
+            setBackgroundColor: function(color) {
+                var links = document.querySelectorAll('body');
+                    for (var i=0; i<links.length; i++) {
+                        links[i].style.backgroundColor = color;
+                }                
+            }
+        }
+
+        var Links = {
+            setColor: function(color) {
+                var links = document.querySelectorAll('a');
+                    for (var i=0; i<links.length; i++) {
+                        links[i].style.color = color;
+                }                
+            }
+        }
+
+        var ActiveLinks = {
+            setColor: function(color) {
+                var links = document.querySelectorAll('.active');
+                    for (var i=0; i<links.length; i++) {
+                        links[i].style.color = color;
+                }                
+            }
+        }
+
+
         function setColor(name, color) {
             var links = document.querySelectorAll(name);
             for (var i=0; i<links.length; i++) {
@@ -22,18 +56,17 @@
         function nightDayHandler(link_btn) {
             if (link_btn.value === 'Day → Night') {   // this = document.querySelector(버튼ID)
                 link_btn.value = 'Night → Day';
-                setBackgroundColor('body', 'black');
-                setColor('body', 'white');
-                setColor('a', 'skyblue');
-                setColor('.active', 'red');
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                Links.setColor('skyblue');
+                ActiveLinks.setColor('red');
             }
             else {
                 link_btn.value = 'Day → Night';
-                var body = document.querySelector('body').style;
-                setBackgroundColor('body', 'white');
-                setColor('body', 'black');
-                setColor('a', 'blue');
-                setColor('.active', 'red');
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                Links.setColor('blue');
+                ActiveLinks.setColor('red');
             }
         }
     </script>
